@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who's that Pokémon?</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/image/logotipo.png" type="image/x-icon">
+
+    <script src="./js/Types.js"></script>
+    <script src="./js/Pokedeck.js"></script>
+    <script src="./js/Utils.js"></script>
+</head>
+
+<body>
+    
+    <div class="header-container">
+        <img id="logoPokemon" src="/image/logoPokemon.png" alt="Pokemon logo">
+
+        <div class="score-container">
+            <div class="score">
+                <img id="yes" src="/image/yes.png" alt="yes">
+                <p id="countYes">: 0</p>
+            </div>
+            <div class="score">
+                <img id="no" src="/image/no.png" alt="no">
+                <p id="countNo">: 0</p>
+            </div>
+        </div>
+
+        <a href="#" class="favorite-button" data-bs-toggle="modal" data-bs-target="#favoriteModal">
+            <img id="favorite" src="/image/star.png" alt="favorite">
+        </a>
+    </div>
+
+    
+    <!-- <button class="btn btn-primary addcard" onclick="Pokedeck.addCard()">Add Card</button> --> 
+    <div class="container-fluid">
+        <div  class="deck d-flex justify-content-center align-items-center vh-100v ">
+            
+            
+        </div>
+    </div>
+
+    
+    
+
+    <div class="modal fade" id="favoriteModal" tabindex="-1" aria-labelledby="favoriteModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-modal">
+                    <h2 class="modal-title fs-5" id="settingsModalLabel">Favorite</h2> 
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body add">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+<!-- Carta al inicio -->
+    <script type="module">
+        await Pokedeck.addRandomCard();
+
+    </script>
+
+
+
+
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
